@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginSys</title>
+    <style>
+       div{
+
+        width: 500px;
+        height: 450px;
+        border:1px solid green;
+        margin:0 auto;
+        padding: 150px;
+        box-sizing: border-box;
+       }
+
+    </style>
+</head>
+<body>
+    <center><h1>Welcome To Login System</h1></center>
+    <hr>
+
+    <div>
+
+         UserName:<br>
+         <input type="text" name="uname" id="uname" value="">
+         <br><br>
+         Password:<br>
+         <input type="password" name="pass" id="pass" value="">
+         <br><br>
+          <button onclick="checkValidation()">Submit</button>
+
+    </div>
+    <script>
+        function checkValidation()
+        {
+           var usname= document.getElementById("uname").value;
+           var passw= document.getElementById("pass").value;
+          // alert(usname);
+           //alert(passw);
+           if(usname=="" || passw=="")
+           {
+                alert("please fill all details");
+           }
+           else if(usname!="admin" && passw!="admin")
+           {
+               alert("You Enter Wrong Details");
+           }
+           else
+           {
+               //window.open("page.html");
+               window.open("page.html","_self");
+           }
+        }
+    </script>
+</body>
+</html>
